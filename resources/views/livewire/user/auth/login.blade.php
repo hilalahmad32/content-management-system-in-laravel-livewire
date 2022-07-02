@@ -12,12 +12,12 @@
             <input type="email" class="field w-input" wire:model.lazy='email' placeholder="Enter your email address"
                 style="display:block;width:100%;border:1px solid black;" />
             @error('email')
-                <span style="color: red"></span>
+                <span style="color: red;display: block;">{{ $message }}</span>
             @enderror
             <input type="password" class="field w-input" wire:model.lazy="password" placeholder="Enter your password"
                 style="display: block;width:100%;border:1px solid black;" />
             @error('password')
-                <span style="color: red"></span>
+                <span style="color: red;display:block;">{{ $message }}</span>
             @enderror
             <input type="submit" value="Login" class="w-button" />
             <span>If you have't account <a href="{{ route('users.register') }}">Register</a> </span>

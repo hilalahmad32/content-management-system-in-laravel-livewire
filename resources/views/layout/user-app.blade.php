@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Blog Home</title>
+    <title>{{ $title }}</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link href="https://assets.website-files.com/5e4b1a54e48aed761d1ff229/css/denali-template.webflow.170e98de3.css"
@@ -29,6 +29,7 @@
     </script>
     <link href="https://assets.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://assets.website-files.com/img/webclip.png" rel="apple-touch-icon" />
+    @livewireStyles
 </head>
 
 <body>
@@ -53,11 +54,9 @@
             </div>
         </div>
     </div>
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b1a54e48aed761d1ff229"
-        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
-    </script>
-    <script src="https://assets.website-files.com/5e4b1a54e48aed761d1ff229/js/webflow.bf6a5095c.js" type="text/javascript">
-    </script>
+
+    @livewireScripts
+
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 

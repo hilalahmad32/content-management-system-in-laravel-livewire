@@ -16,4 +16,9 @@ class category extends Model
         'content',
         'keyword',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

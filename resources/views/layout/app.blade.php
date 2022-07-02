@@ -44,7 +44,13 @@
                     <a href="{{ route('category') }}" class="nav-link w-nav-link">Categories</a>
                     <a href="/about" class="nav-link w-nav-link">About</a>
                     <a href="/contact" class="nav-link w-nav-link">Contact</a>
-                    <a href="{{ route('users.login') }}" class="nav-link w-nav-link">Login</a>
+                    @auth
+                        <a href="{{ route('users.my-posts') }}" class="nav-link w-nav-link">My Account</a>
+                        @livewire('user.auth.logout')
+                    @endauth
+                    @guest
+                        <a href="{{ route('users.login') }}" class="nav-link w-nav-link">Login</a>
+                    @endguest
                     <a href="#" class="close-x w-hidden-main w-hidden-medium w-hidden-small">×</a>
                 </nav>
                 <div class="menu-button w-hidden-main w-hidden-medium w-hidden-small w-clearfix w-nav-button">
